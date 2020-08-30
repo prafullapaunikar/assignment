@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  color: #536C67;
+}
+
+.container {
+  display: flex;
+}
+
+.separator {
+  height: 1px;
+  margin-bottom: 0.2rem;
+  background: #E9EDEC;
+}
+
+/* Menu Style Starts */
+.menu {
+  padding: 1rem;
+  width: 230px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+.menu .logo {
+  margin-bottom: 1rem;
+}
+.menu img {
+  width: 170px;
+}
+.menu .menu-item {
+  margin-bottom: 0.2rem;
+}
+.menu .menu-item a {
+  padding: 0.8rem;
+  display: block;
+  color: #535C6C;
+  border-radius: 7px;
+  transition: color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.menu .menu-item a.active, .menu .menu-item a:hover {
+  background: #536C67;
+  color: #E9EDEC;
+}
+.menu .menu-item a .icon {
+  margin-right: 0.8rem;
+  vertical-align: sub;
+}
+
+/* Menu Style Ends */
+/* Main Content Style Starts */
+.main-content {
+  width: calc(100% - 230px);
+  background: #F4F4F6;
+  padding: 1rem;
+}
+.main-content .header {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .header .date-container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid #E9EDEC;
+}
+.main-content .header .date-container .date,
+.main-content .header .date-container .month,
+.main-content .header .date-container .year {
+  margin: 0 3px;
+}
+.main-content .header .date-container .date {
+  font-size: 1.2rem;
+}
+.main-content .header .date-container .month {
+  font-size: 1rem;
+}
+.main-content .header .date-container .year {
+  font-size: 0.85rem;
+}
+.main-content .header .user-container {
+  display: flex;
+  align-items: center;
+  padding: 3px 10px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px #535C6C;
+}
+.main-content .header .user-container .title {
+  text-align: right;
+  font-size: 0.85rem;
+  padding-right: 15px;
+}
+.main-content .header .user-container .title .name {
+  font-weight: 600;
+}
+.main-content .header .user-container .title .comp-name {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+.main-content .header .user-container .icon-user {
+  padding: 2px;
+  margin: 0 7px;
+  color: #5FBCD3;
+  border: 1px solid #535C6C;
+  font-size: 2rem;
+}
+.main-content .top,
+.main-content .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .top {
+  margin: 15px 0;
+}
+.main-content .top .spend-summary {
+  width: 39%;
+}
+.main-content .top .spend-summary .item {
+  height: 35px;
+  line-height: 35px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+.main-content .top .spend-summary .item:last-child {
+  align-items: flex-end;
+}
+.main-content .top .spend-summary .item .amount {
+  font-size: 1rem;
+}
+.main-content .top .spend-summary .item a.amount {
+  color: #2F75DC;
+}
+.main-content .top .spend-summary .item a.amount .icon-link {
+  font-size: 0.85rem;
+}
+.main-content .top .spend-summary .item .link {
+  display: flex;
+  align-items: center;
+}
+.main-content .top .spending-category {
+  width: 59%;
+}
+.main-content .top .spend-summary,
+.main-content .top .spending-category {
+  background: #FFFFFF;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+.main-content .top .spend-summary h3,
+.main-content .top .spending-category h3 {
+  padding-bottom: 15px;
+}
+.main-content .bottom .transactions,
+.main-content .bottom .payments {
+  width: 49%;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+.main-content .bottom .transactions .heading,
+.main-content .bottom .payments .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.main-content .bottom .transactions .heading > div,
+.main-content .bottom .payments .heading > div {
+  display: flex;
+}
+.main-content .bottom .transactions .heading a,
+.main-content .bottom .payments .heading a {
+  color: #2F75DC;
+  display: flex;
+  font-size: 0.8rem;
+  align-items: center;
+  padding-left: 15px;
+}
+.main-content .bottom .transactions .heading a i,
+.main-content .bottom .payments .heading a i {
+  transition: transform 0.25s ease-in-out;
+}
+.main-content .bottom .transactions .heading a:hover i,
+.main-content .bottom .payments .heading a:hover i {
+  transform: translate(5px);
+}
+.main-content .bottom .transactions li,
+.main-content .bottom .payments li {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  align-items: center;
+  line-height: 1.8;
+  border: 1px solid #E9EDEC;
+}
+.main-content .bottom .transactions li .amt-container,
+.main-content .bottom .payments li .amt-container {
+  width: 35%;
+  text-align: right;
+  padding-right: 20px;
+  border-right: 1px solid #535C6C;
+  font-size: 0.75rem;
+}
+.main-content .bottom .transactions li .amt-container > div:first-child,
+.main-content .bottom .payments li .amt-container > div:first-child {
+  color: #137D3D;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main-content .bottom .transactions li .amt-container .amount,
+.main-content .bottom .payments li .amt-container .amount {
+  font-size: 1.2rem;
+}
+.main-content .bottom .transactions li .title,
+.main-content .bottom .payments li .title {
+  width: 55%;
+  padding: 0 20px;
+  flex-direction: column;
+}
+.main-content .bottom .transactions li .title .date,
+.main-content .bottom .payments li .title .date {
+  font-size: 0.85em;
+}
+.main-content .bottom .transactions li .actions,
+.main-content .bottom .payments li .actions {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+.main-content .bottom .transactions li .actions a,
+.main-content .bottom .payments li .actions a {
+  width: 50%;
+  text-align: center;
+}
+.main-content .bottom .payments li {
+  align-items: flex-start;
+}
+.main-content .bottom .payments .actions a {
+  width: 100%;
+  font-size: 0.85rem;
+}
+.main-content .bottom .payments .amt-container > div:first-child {
+  color: #536C67 !important;
+}
+
+/* Main Content Style Ends */
+
+/*# sourceMappingURL=style.css.map */
